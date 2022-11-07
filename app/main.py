@@ -38,8 +38,9 @@ async def cat_2020():
     datos['director'] = datos['director'].replace('Not Given',None)
     mask_2020 = datos["release_year"].str.contains("2020", na=False)
     datos_2020 = datos[mask_2020]
+    catalogo2020 = datos_2020.reset_index().to_dict(orient="index") 
     
-    return {datos_2020.reset_index().to_dict(orient="index")}
+    return {catalogo2020}
 
 
 
@@ -52,5 +53,6 @@ async def cat_2021():
     datos['director'] = datos['director'].replace('Not Given',None)
     mask_2021 = datos["release_year"].str.contains("2021", na=False)
     datos_2021 = datos[mask_2021]
+    catalogo2021 = datos_2021.reset_index().to_dict(orient="index")
     
-    return {datos_2021.reset_index().to_dict(orient="index")}
+    return {catalogo2021}
