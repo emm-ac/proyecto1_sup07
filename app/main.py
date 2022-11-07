@@ -17,7 +17,7 @@ async def root():
 @app.get("/2019")
 async def cat_2019():
     
-    datos = pd.read_csv(r'.app\Netflix_ok.csv', sep=';')
+    datos = pd.read_csv(r'.Netflix_ok.csv', sep=';')
     datos['date_added'] = pd.to_datetime(datos['date_added'], errors='coerce')
     datos.sort_values(by=['date_added'], inplace=True)
     datos['director'] = datos['director'].replace('Not Given',None)
@@ -31,7 +31,7 @@ async def cat_2019():
 @app.get("/2020")
 async def cat_2020():
     
-    datos = pd.read_csv(r'.app\Netflix_ok.csv', sep=';')
+    datos = pd.read_csv(r'.Netflix_ok.csv', sep=';')
     datos['date_added'] = pd.to_datetime(datos['date_added'], errors='coerce')
     datos.sort_values(by=['date_added'], inplace=True)
     datos['director'] = datos['director'].replace('Not Given',None)
@@ -45,7 +45,7 @@ async def cat_2020():
 @app.get("/2021")
 async def cat_2021():
     
-    datos = pd.read_csv(r'.app\Netflix_ok.csv', sep=';')
+    datos = pd.read_csv(r'.Netflix_ok.csv', sep=';')
     datos['date_added'] = pd.to_datetime(datos['date_added'], errors='coerce')
     datos.sort_values(by=['date_added'], inplace=True)
     datos['director'] = datos['director'].replace('Not Given',None)
