@@ -23,8 +23,9 @@ async def cat_2019():
     datos['director'] = datos['director'].replace('Not Given',None)
     mask_2019 = datos["release_year"].str.contains("2019", na=False)
     datos_2019 = datos[mask_2019]
+    catalogo2019 = datos_2019.reset_index().to_dict(orient="index")
     
-    return {datos_2019.reset_index().to_dict(orient="index")}
+    return {catalogo2019}
 
 
 
