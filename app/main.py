@@ -40,7 +40,7 @@ async def cat_2020():
     datos_2020 = datos[mask_2020]
     catalogo2020 = datos_2020.reset_index().to_dict(orient="index") 
     
-    return {catalogo2020}
+    return (catalogo2020)
 
 
 
@@ -55,4 +55,4 @@ async def cat_2021():
     datos_2021 = datos[mask_2021]
     catalogo2021 = datos_2021.reset_index().to_dict(orient="index")
     
-    return {catalogo2021}
+    return (catalogo2021)
